@@ -3,7 +3,11 @@
 
 import sys
 
-arguments = sys.argv[1:]
+if len(sys.argv) < 2:
+    print('none')
 
-for i in arguments:
-    print(f'{i}: {len(i)}')
+else:
+    arguments = sys.argv[1:]
+    print(f'parameters: {len(arguments)}')
+    for i in arguments:
+        print(f'{i}: {len(i)}')

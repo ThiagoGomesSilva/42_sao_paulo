@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 '''Exercicio 5.10 '''
+import sys
 
-name = input('What was the parameter?')
-
-if name == "":
+if len(sys.argv) < 2:
     print('none')
-elif name == "Hello":
-    print('Good job!')
 else:
-    print('Nope, sorry...')
+    name = input('What was the parameter?')
+    if name == "Hello":
+        print('Good job!')
+    else:
+        print('Nope, sorry...')
+

@@ -2,11 +2,11 @@
 '''Exercicio 7.3 '''
 
 def famous_births(param):
-    if "date_of_birth" == True:
-        order_years = sorted(param.keys())
-    else:
-        False
-    return order_years
+    
+    figures = sorted(param.items(), key=lambda item: item[1]['date_of_birth'])
+
+    for key, details in figures:
+        print(f"Name: {details['name']}, Date of Birth: {details['date_of_birth']}")
 
 women_scientists = {
     "ada": { "name": "Ada Lovelace", "date_of_birth": "1815" },
@@ -15,4 +15,4 @@ women_scientists = {
     "grace": { "name": "Grace Hopper", "date_of_birth": "1906" }
 }
 
-print(famous_births(women_scientists))
+famous_births(women_scientists)

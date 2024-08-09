@@ -2,16 +2,23 @@
 '''Exercicio 5.12 '''
 
 import sys
+            
+def main():
+    # Check the number of command-line arguments
+    if len(sys.argv) != 2:
+        print("none")
+        return
+    
+    input_string = sys.argv[1]
+    
+    found_z = False
+    for char in input_string:
+        if char == 'z':
+            print('z', end = '')
+            found_z = True
+    
+    if not found_z:
+        print("none")
 
-letter = 'z'
-arguments = sys.argv[1:]
-
-for i in arguments:
-    letter_user = i.count(letter)
-    count = len(i)
-    if count > 1:
-        print(f'{letter_user}')
-    elif count == letter_user:
-        print(f'{letter_user}')
-    else:
-        print('none')
+if __name__ == "__main__":
+    main()
